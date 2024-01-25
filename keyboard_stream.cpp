@@ -45,8 +45,8 @@ InterruptIn button2(BUTTON_B);
 BLE ble;
 KeyboardService *kbdServicePtr;
 
-static const char DEVICE_NAME[] = "micro:bit Rubber Ducky";
-static const char SHORT_DEVICE_NAME[] = "ducky";
+static const char DEVICE_NAME[] = "spikeboard v2";
+static const char SHORT_DEVICE_NAME[] = "spikeboard";
 
 static void onDisconnect(const Gap::DisconnectionCallbackParams_t *params)
 {
@@ -90,11 +90,11 @@ void send_string(const char * c) {
 // Save a file with default name = "\x99,s,\n"
 
 void send_stuff() {
-    send_string("\x99,s,\n");
+    send_string("\x95");
 }
 
 void send_more_stuff() {
-    send_string("\x8C");
+    send_string("\x94");
 }
 
 int main()

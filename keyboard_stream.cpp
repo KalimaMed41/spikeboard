@@ -21,19 +21,6 @@
 
 #include "examples_common.h"
 
-/**
- * This program implements a complete HID-over-Gatt Profile:
- *  - HID is provided by KeyboardService
- *  - Battery Service
- *  - Device Information Service
- *
- * Complete strings can be sent over BLE using printf. Please note, however, than a 12char string
- * will take about 500ms to transmit, principally because of the limited notification rate in BLE.
- * KeyboardService uses a circular buffer to store the strings to send, and calls to putc will fail
- * once this buffer is full. This will result in partial strings being sent to the client.
- */
- 
- //The micro:bit has a matrixed display, this is a simple way to use some LEDs on it
 DigitalOut col9(P0_12, 0);
 
 DigitalOut waiting_led(P0_13);
